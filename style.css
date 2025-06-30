@@ -1,9 +1,1045 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
 
+/*________General__________*/
+
+/*
+76px - 4em
+36px - 2em
+30px - 1.67em
+24px - 1.34em
+20px - 1.12em
+18px - 1em
+16px - 0.89em
+14px - 0.78em
+12px - 0.67em
+
+*/
+
+:root {
+    --main-color: #2E064D;
+    --gradientMain: linear-gradient(90deg, #997FFC 0%, #DC66EE 100%);
+    --gradient1: linear-gradient(162.59deg, #33095E 28.47%, #BF92FF 86.21%);
+    --gradient2: linear-gradient(180deg, #7660FB 0%, #DA7DFB 100%);
+    --gradient3: linear-gradient(180deg, #58FFCD 0%, #C8FF6A 100%);
+    --gradient4: linear-gradient(180deg, #9956F5 -16.33%, #3B0F6A 80.26%);
+    --gradient5: linear-gradient(180deg, #60FCCB 0%, #7EB9FC 100%);
+    --wW: 80vw;
+    --wWPad: calc((100vw - var(--wW)) / 2);
+}
+
 body {
-    background-color: #2E064D;
+    background-color: var(--main-color);
     overflow-x: hidden;
     margin: 0;
-    font-size: 18px;
+    font-size: 1.1vw;
     font-family: "Comfortaa", sans-serif;
+    text-align: center;
+    color: #ffffff;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+
+h1 {
+    font-size: 4em;
+    background-image: var(--gradientMain);
+    background-clip: text;
+    color: transparent;
+}
+
+.colored {
+    background-image: var(--gradientMain);
+    background-clip: text;
+    color: transparent;
+}
+
+h2 {
+    font-size: 4em;
+}
+
+h3 {
+    font-size: 2em;
+}
+h4 {
+    font-size: 1.34em;
+    font-weight: 300;
+}
+
+.btn {
+    border: none;
+    padding: 1.5em 2.5em;
+    border-radius: 3em;
+    margin: 1em 0;
+    font-size: 0.78em;
+    transition: 0.3s;
+    z-index: 2;
+}
+.btn:active {
+    filter: brightness(0.85);
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/*________Other general__________*/
+
+.effect {
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+}
+.logoEL {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    --w: 10vw;
+}
+.logoELHead {
+    width: calc(var(--w) * 0.6);
+    height: calc(var(--w) * 0.6);
+    border-radius: 50%;
+    background: var(--gradientEL);
+    margin-bottom: calc(var(--w) * 0.05);
+    box-shadow: -9px -7px 16.5px 4px #00000040 inset;
+}
+
+.logoELBody {
+    box-sizing: border-box;
+    width: var(--w);
+    height: var(--w);
+    border-radius: var(--w);
+    background: var(--gradientEL);
+    mask: radial-gradient(transparent 35%, #000 35%);
+    box-shadow: -9px -7px 16.5px 4px #00000040 inset;
+
+}
+.logoELBody2 {
+    box-sizing: border-box;
+    width: var(--w);
+    height: calc(var(--w)*1.5);
+    border-radius: var(--w);
+    background: var(--gradientEL);
+    mask: radial-gradient(transparent 42%, #000 42%);
+}
+/*________Header__________*/
+
+header {
+    height: 4.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.8vw 2.8vw;
+}
+.logo {
+    height: 4.5em;
+}
+.nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 50%;
+    height: 3.5em;
+    border-radius: 2vw;
+    background: linear-gradient(180deg, rgba(62, 67, 181, 0.4) 0%, rgba(179, 62, 181, 0.32) 100%);
+    padding: 0 10px;
+    font-size: 0.67em;
+}
+.burger_icon {
+    display: none;
+}
+
+/*________Block1__________*/
+
+#block1 {
+    box-sizing: border-box;
+    width: var(--wW);
+    aspect-ratio: 16/9;
+    margin: 40px auto;
+    border-radius: 5vw;
+    background: var(--gradient1);
+    position: relative;
+    scroll-margin-top: 5vh;
+}
+#block1 .frame {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 2.6vw 5.2vw;
+    border-radius: 5vw;
+    text-align: start;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+#logoEL1 {
+    --w: 10vw;
+    --gradientEL: linear-gradient(180deg, rgba(114, 253, 203, 0.2) 0%, rgba(225, 233, 101, 0.2) 100%);
+    width: var(--w);
+    top: -4.5%;
+    left: -4.5%;
+    transform: rotate(30deg);
+}
+#logoEL2 {
+    --w: 10vw;
+    --gradientEL: linear-gradient(210deg, rgba(193, 147, 255, 0.5) 0%, rgba(110, 189, 255, 0.5) 100%);
+    width: var(--w);
+    bottom: 5%;
+    right: -4.5%;
+    transform: rotate(-30deg);
+}
+#logoEL2 .logoELBody {
+    box-shadow: none;
+}
+#logoEL2 .logoELHead {
+    box-shadow: none;
+}
+
+.contact-img {
+    width: 1.67em;
+    height: 1.67em;
+    margin-right: 1em;
+}
+.promt {
+    font-size: 0.67em;
+}
+#imgChildren {
+    position: absolute;
+    left: 43%;
+    top: -5%;
+    height: 110%;
+    z-index: 2;
+}
+#imgPoints {
+    width: 22vw;
+    position: absolute;
+    left: 35%;
+    bottom: 15%;
+}
+#ellipse1 {
+    width: 40vw;
+    height: 40vw;
+    position: absolute;
+    left: 45%;
+    bottom: -20%;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #F4BB14 0%, #B42784 100%);
+    filter: blur(80px);
+    z-index: 1;
+}
+
+/*________Block2__________*/
+
+#block2 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#logoEL3 {
+    --w: 12vw;
+    --gradientEL: linear-gradient(180deg, rgba(114, 253, 203, 0.2) 0%, rgba(225, 233, 101, 0.2) 100%);
+    width: var(--w);
+    top: 5%;
+    right: -4.5%;
+    transform: rotate(-30deg);
+}
+
+
+.decore-title {
+    position: absolute;
+}
+
+#dec1 {
+    height: 2em;
+    top: 0.6em;
+    left: -0.1em;
+}
+
+.decorated-title {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+.rate-space {
+    width: var(--wW);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.rate-block {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    justify-content: space-between;
+    border-radius: 4vw;
+    background: linear-gradient(180deg, #512681 0%, #A77CE5 100%);
+    width: 24vw;
+    height: 24vw;
+    position: relative;
+    box-sizing: border-box;
+    padding: 2em;
+    overflow: hidden;
+}
+.rate-block p {
+    font-size: 1.12em;
+}
+.rate {
+    font-size: 5.5em;
+}
+.rate-star {
+    width: 60%;
+    position: absolute;
+    transform: rotate(5deg);
+    bottom: -2%;
+    right: -1%;
+}
+.review-block {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    justify-content: space-between;
+    border-radius: 4vw;
+    background: var(--gradient2);
+    width: 24vw;
+    height: 24vw;
+    position: relative;
+    box-sizing: border-box;
+    padding: 2em;
+    overflow: hidden;
+}
+.star {
+    width: 1.12em;
+    height: 1.12em;
+    margin-left: 0.3em;
+}
+.review-profile {
+    width: 2em;
+    margin-right: 0.5em;
+}
+.review-name {
+    font-size: 0.78em;
+}
+
+/*________Block3__________*/
+
+#effect1 {
+    top: 5%;
+    left: 0%;
+}
+
+#about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3vw;
+    position: relative;
+    width: var(--wW);
+    padding: 0 var(--wWPad);
+}
+#dec2 {
+    height: 1.5em;
+    right: 2px;
+    bottom: 0;
+}
+
+#rect1 {
+    background-image: url(images/Rectangle52.png);
+    width: 100%;
+    aspect-ratio: 15/9;
+    background-size: 100% 100%;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    padding-left: 3vw;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+#rect1 h4 {
+    max-width: 50%;
+    margin-bottom: 8vw;
+}
+
+#together {
+    width: 32vw;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+#logoEL4 {
+    --w: 8vw;
+    --gradientEL: linear-gradient(180deg, rgba(193, 147, 255, 0.4) 0%, rgba(110, 189, 255, 0.4) 100%);
+    width: var(--w);
+    bottom: -15%;
+    left: 25%;
+    transform: rotate(45deg);
+}
+#logoEL4 .logoELHead {
+    box-shadow: none;
+}
+
+
+.rect {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    justify-content: space-between;
+    border-radius: 4vw;
+    background: linear-gradient(180deg, #34095E 24.75%, #B88DF9 105.76%);
+    width: 37vw;
+    height: 23vw;
+    position: relative;
+    box-sizing: border-box;
+    padding: 1vw 5vw;
+    overflow: hidden;
+}
+.rect-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 5vw;
+}
+.rect-img {
+    position: absolute;
+    right: 0%;
+    bottom: -2%;
+    height: 91%;
+}
+.rect h3 {
+    max-width: 80%;
+}
+.rect p {
+    max-width: 60%;
+}
+.question-icon {
+    width: 6vw;
+    height: 6vw;
+    font-weight: 700;
+    font-size: 2.8em;
+    background: var(--gradient3);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    box-sizing: border-box;
+    border-radius: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    margin: 0 2vw;
+}
+
+.question-icon::before {
+    content: "";
+    position: absolute;
+    top: -1.2vw;
+    left: -1vw;
+    right: -1vw;
+    bottom: -1vw;
+    background: var(--gradient3);
+    border-radius: 7vw;
+    z-index: -1;
+    mask: radial-gradient(transparent 35%, #000 35%);
+}
+
+.question {
+    background: linear-gradient(180deg, #C28FFE 0%, #7FB4FF 100%);
+    width: 67vw;
+    height: 3em;
+    border-radius: 5vw;
+    font-size: 1.34em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*________Block4__________*/
+
+#block4 {
+    position: relative;
+    width: 100vw;
+}
+#dec3 {
+    object-fit: cover;
+    height: 2em;
+    right: -0.8em;
+    bottom: 0;
+}
+#logoEL5 {
+    --w: 12vw;
+    --gradientEL: linear-gradient(180deg, rgba(114, 253, 203, 0.2) 0%, rgba(225, 233, 101, 0.2) 100%);
+    width: var(--w);
+    top: -4.5%;
+    left: -4.5%;
+    transform: rotate(30deg);
+}
+#logoEL6 {
+    --w: 10vw;
+    --gradientEL: linear-gradient(180deg, rgba(114, 253, 203, 0.2) 0%, rgba(225, 233, 101, 0.2) 100%);
+    width: var(--w);
+    bottom: -12%;
+    right: -4.5%;
+    transform: rotate(-30deg);
+}
+.description {
+    font-size: 0.89em;
+}
+
+#effect2 {
+    top: 5%;
+    right: 0;
+}
+
+#galaxy {
+    position: relative; 
+    margin-top: 7vw; 
+    width: 100vw;
+}
+
+#ring_big {
+    left: 10%;
+    top: 0;
+    width: 70vw;
+    height: 70vw;
+    position: relative;
+    border: 1px solid #38DEE8;
+    border-radius: 50%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+#ring_small {
+    width: 40vw;
+    height: 40vw;
+    border: 1px solid #38DEE8;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.circle {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 50%;
+    padding: 2.7vw;
+    box-sizing: border-box;
+    z-index: 3;
+}
+.circle-title {
+    font-size: 1.12em;
+}
+#circle1 {
+    color: black;
+    background: var(--gradient3);
+    border-radius: 50%;
+    width: 17vw;
+    height: 17vw;
+    left: 2%;
+    top: 1%;
+}
+#circle2 {
+    background: var(--gradient4);
+    border-radius: 50%;
+    width: 24vw;
+    height: 24vw;
+    left: 30%;
+    top: -7%;
+}
+#circle3 {
+    position: absolute;
+    width: 32vw;
+    left: 70%;
+    top: -8%;
+}
+#circle4 {
+    background: linear-gradient(180deg, #34095E 0%, #A67BE3 100%);
+    border-radius: 50%;
+    width: 35vw;
+    height: 35vw;
+    position: relative;
+    box-shadow: -37px -29px 84.2px -8px #2E064DCC inset;
+
+}
+#circle5 {
+    background: linear-gradient(180deg, #34095E 0%, #A67BE3 100%);
+    border-radius: 50%;
+    width: 20vw;
+    height: 20vw;
+    position: absolute;
+    left: 93%;
+    top: 35%;
+}
+#circle6 {
+    background: var(--gradient2);
+    border-radius: 50%;
+    width: 17vw;
+    height: 17vw;
+    position: absolute;
+    left: 87%;
+    top: 33%;
+}
+#circle7 {
+    background: var(--gradient3);
+    border-radius: 50%;
+    width: 13vw;
+    height: 13vw;
+    left: 84%;
+    top: 66%;
+}
+#circle7 img {
+    height: 100%;
+    position: absolute;
+    top: -20%;
+}
+#circle8 {
+    background: var(--gradientMain);
+    border-radius: 50%;
+    width: 14vw;
+    height: 14vw;
+    left: 26%;
+    top: 82%;
+}
+#circle8 img {
+    height: 105%;
+    position: absolute;
+    top: -33%;
+    left: 5%;
+}
+#circle9 {
+    background: var(--gradient4);
+    border-radius: 50%;
+    width: 15vw;
+    height: 15vw;
+    left: 55%;
+    top: 79%;
+}
+#btn2 {
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    color: black;
+    background: var(--gradient5);
+}
+
+/*________Block5__________*/
+
+#block5 {
+    width: var(--wW);
+    padding: 0 var(--wWPad);
+    margin-top: 8vw;
+    position: relative;
+}
+#logoEL7 {
+    --w: 11vw;
+    --gradientEL: linear-gradient(148.43deg, #8d83fe8b 19.03%, #f45cea8f 43.57%);
+    width: var(--w);
+    top: 10%;
+    left: -5%;
+    transform: rotate(30deg);
+}
+#logoEL7 .logoELHead {
+    box-shadow: -9px -7px 16.5px 4px #00000060 inset;
+}
+#logoEL7 .logoELBody {
+    box-shadow: -9px -7px 16.5px 4px #00000060 inset;
+}
+#dec4 {
+    top: -0.5em;
+    right: -1.5em;
+    height: 3em;
+}
+
+#block5 .rect-row {
+    margin-top: 2vw;
+    justify-content: space-evenly;
+}
+#block5 .rect {
+    justify-content: center;
+}
+#block5 .rect .p {
+    width: 35%;
+}
+#block5 .rect-img {
+    bottom: 10%;
+    height: 80%;
+}
+
+/*________Block6__________*/
+
+#block6 {
+    position: relative;
+    width: var(--wW);
+    padding: 0 var(--wWPad); 
+}
+
+#dec5 {
+    top: 0em;
+    left: -1.8em;
+    width: 2.5em;
+}
+#logoEL8 {
+    --w: 10vw;
+    --gradientEL: linear-gradient(180deg, rgba(114, 253, 203, 0.2) 0%, rgba(225, 233, 101, 0.2) 100%);
+    width: var(--w);
+    top: -4.5%;
+    left: -4.5%;
+    transform: rotate(30deg);
+}
+#logoEL9 {
+    --w: 8vw;
+    --gradientEL: linear-gradient(180deg, rgba(193, 147, 255, 0.2) 0%, rgba(110, 189, 255, 0.2) 100%);
+    width: var(--w);
+    bottom: 0%;
+    right: -3.4%;
+    transform: rotate(-35deg);
+}
+#logoEL9 .logoELHead {
+    box-shadow: none;
+}
+.profile-img {
+    width: 36vw;
+}
+.profile-rings {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    --rWPad: 0vw;
+    width: calc(var(--rWPad)*2 + 100vw);
+    left: calc((var(--rWPad) + 10vw) * (-1));
+    height: 36vw;
+}
+.profile-column {
+    position: relative;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    align-items: start;
+}
+#block6 .rect-row {
+    align-items: start;
+    margin-top: 0;
+}
+#rings2 {
+    display: none;
+}
+.profile-ring {
+    box-sizing: border-box;
+    width: 36vw;
+    height: 36vw;
+    border-radius: 50%;
+    border: 1px solid #A77CE5;
+    position: absolute;
+}
+.line {
+    width: 90vw;
+    height: 1px;
+    background: var(--gradient4);
+    margin: 3vw 0 0 calc(var(--wWPad) / (-2));
+}
+
+/*________Block7__________*/
+
+#courses {
+    position: relative;
+    width: var(--wW);
+    padding: 0 var(--wWPad); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#dec6 {
+    top: -1em;
+    left: -1.9em;
+    width: 2.9em;
+}
+
+.course {
+    width: 100%;
+    border-radius: 4vw;
+    background: var(--gradient4);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: start;
+    position: relative;
+    padding: 2vw 4vw 4vw 4vw;
+    overflow: hidden;
+    box-sizing: border-box;
+    margin-top: 5vw;
+    z-index: 0;
+}
+
+.logoELCourse {
+    --w: 8vw;
+    --gradientEL: linear-gradient(180deg, rgba(114, 253, 203, 0.4) 0%, rgba(225, 233, 101, 0.4) 100%);
+    width: var(--w);
+    top: -4%;
+    left: -4%;
+    transform: rotate(30deg);
+    z-index: 1;
+}
+.logoELCourse .logoELBody {
+    box-shadow: none;
+}
+.logoELCourse .logoELHead {
+    box-shadow: none;
+}
+.course-title {
+    font-size: 2.9em;
+    background-image: linear-gradient(148.43deg, #8E83FE 19.03%, #F45CE9 43.57%);
+    z-index: 2;
+}
+.course h4, .course p {
+    width: 60%;
+    z-index: 2;
+}
+.course-img {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    height: 70%;
+    z-index: 2;
+}
+.course-effect {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    bottom: 0%;
+    z-index: 0;
+}
+#logoEL11 {
+    --w: 10vw;
+    --gradientEL: linear-gradient(180deg, rgba(114, 253, 203, 0.2) 0%, rgba(225, 233, 101, 0.2) 100%);
+    width: var(--w);
+    top: 50%;
+    right: -4.5%;
+    transform: rotate(-30deg);
+}
+#logoEL12 {
+    --w: 11vw;
+    --gradientEL: linear-gradient(148.43deg, #8d83fe8b 19.03%, #f45cea8f 43.57%);
+    width: var(--w);
+    top: 38%;
+    left: -5%;
+    transform: rotate(30deg);
+}
+#logoEL12 .logoELHead {
+    box-shadow: -9px -7px 16.5px 4px #00000060 inset;
+}
+#logoEL12 .logoELBody {
+    box-shadow: -9px -7px 16.5px 4px #00000060 inset;
+}
+
+#logoEL13 {
+    --w: 8vw;
+    --gradientEL: linear-gradient(180deg, rgba(193, 147, 255, 0.2) 0%, rgba(110, 189, 255, 0.2) 100%);
+    width: var(--w);
+    top: 78%;
+    right: -3.4%;
+    transform: rotate(-35deg);
+}
+#logoEL13 .logoELHead {
+    box-shadow: none;
+}
+
+/*________Form__________*/
+
+form {
+    width: 80vw;
+    border-radius: 4vw;
+    background: linear-gradient(180deg, #34095E -16.33%, #A77CE5 80.26%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    margin: 5vw auto;
+    
+}
+form h2 {
+    font-weight: 300;
+}
+.input-line {
+    width: 55%;
+    border-bottom: 2px solid white;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 0.5em;
+    margin-bottom: 3vw;
+}
+label {
+    width: 40%;
+    text-align: start;
+}
+input {
+    text-align: start;
+    width: 60%;
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 1em;
+    font-family: "Comfortaa", sans-serif;
+
+}
+input:focus {
+    outline: none;
+    box-shadow: none;
+}
+textarea {
+    width: 60%;
+    background-color: transparent;
+    color: white;
+    border: none;
+    text-align: start;
+    font-size: 1em;
+    font-family: "Comfortaa", sans-serif;
+    resize: vertical;
+}
+textarea:focus {
+    outline: none;
+    box-shadow: none;
+}
+.form-policy {
+    color: #ffffff7e;
+    font-size: 0.67em;
+    width: 35%;
+    margin-bottom: 2vw;
+}
+#logoEL14 {
+    --w: 7.5vw;
+    --gradientEL:  linear-gradient(180deg, rgba(254, 119, 228, 0.4) 0%, rgba(230, 98, 254, 0.4) 100%);
+    width: var(--w);
+    bottom: -1%;
+    right: -2%;
+    transform: rotate(-20deg);
+}
+#logoEL14 .logoELHead {
+    box-shadow: none;
+}
+#logoEL14 .logoELBody {
+    box-shadow: none;
+}
+
+/*________Block8__________*/
+
+
+#block8 {
+    box-sizing: border-box;
+    width: var(--wW);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    text-align: start;
+    border-radius: 4vw;
+    background: linear-gradient(162.59deg, #33095E 28.47%, #9F5BFF 86.21%);
+    padding: 2vw 4vw;
+    position: relative;
+    overflow: hidden;
+}
+
+#block8 .decorated-title {
+    width: 70%;
+}
+#dec7 {
+    height: 3.5em;
+    top: -0.4em;
+    right: -1.4em;
+}
+#logoEL15 {
+    --w: 10vw;
+    --gradientEL: linear-gradient(180deg, rgba(114, 253, 203, 0.2) 0%, rgba(225, 233, 101, 0.2) 100%);
+    width: var(--w);
+    top: 0%;
+    right: -4.5%;
+    transform: rotate(-30deg);
+}
+#logoEL15 .logoELBody {
+    box-shadow: none;
+}
+#logoEL15 .logoELHead {
+    box-shadow: none;
+}
+
+footer {
+    box-sizing: border-box;
+    height: 16vw;
+    width: var(--wW);
+    margin: 5vw auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vw 5vw;
+    background: linear-gradient(180deg, #34095E 24.75%, #B88DF9 105.76%);
+    border-radius: 2vw;
+    position: relative;
+}
+
+.footer-img {
+    width: 2em;
+    margin: 0 0.5em;
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: fit-content;
+    height: 12vw;
+    border-radius: 1vw;
+    background: linear-gradient(180deg, rgba(62, 67, 181, 0.4) 0%, rgba(179, 62, 181, 0.32) 100%);
+    padding: 0 10px;
+    font-size: 0.67em;
+    transform: translateX(-10vw)
+
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
